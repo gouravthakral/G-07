@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<style>
+    h3{
+        color: green;
+    }
+    button{
+        width: 200px;
+        padding: 20px;
+        font-weight: bold;
+    }
+</style>
+<body>
+    <h1>DOM 1</h1>
+    <h3>Welcome to my Webpage</h3>
+    <button id="sub">Exit</button>
+</body>
+</html>
+<script>
+    var btn = document.querySelector("#sub")
+    btn.addEventListener("click",eventButton)
+
+    var flag = false
+    function eventButton(){
+        // alert("Button is clicked")
+        flag=!flag
+        if(flag){
+            var h3 = document.querySelector("h3")
+            h3.innerText="Okay! Thanks for Visiting"
+            btn.innerHTML="Welcome"
+            h3.style.color="red"
+        }
+        else{
+            var h3 = document.querySelector("h3")
+            h3.innerText="Welcome to my Webpage"
+            btn.innerHTML="Exit"
+            h3.style.color="blue"
+        }
+        
+    }
+
+</script>
